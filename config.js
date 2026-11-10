@@ -30,10 +30,10 @@ window.CONFIG = {
 
   // Penilaian dikirim ke Google Form (lihat README.md langkah 3).
   // Kosongkan 3 baris ini kalau belum ada Form.
-  form: {
-    action: "",      // contoh: "https://docs.google.com/forms/d/e/XXXXXXXX/formResponse"
-    entryBintang: "",// contoh: "entry.1234567890"
-    entryKesan: ""   // contoh: "entry.0987654321"
+   form: {
+    action: "https://docs.google.com/forms/d/e/1FAIpQLSfG3RH1QPqxmmVBr1uR27mY7ylLqqj-ztaKP6BKdiHozGxvVQ/formResponse",
+    entryBintang: "entry.1008683264",
+    entryKesan: "entry.746817541"
   },
 
   footer: "Vaporhitz Vapestore · Terima kasih sudah mampir"
