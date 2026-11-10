@@ -4,7 +4,7 @@
 // =====================================================
 window.CONFIG = {
   nama: "VAPORHITZ VAPESTORE",
-  tagline: "Selamat datang, selamat berbelanja! Sambil menunggu, silakan nikmati fasilitas Vaporhitz Vapestore.",
+  tagline: "Makasih sudah mampir! Sambil nunggu, yuk cek Menu Nicotine Cafe & Bar, ada juga FREE WIFI yang bisa kalian nikmati.”",
   logo: "assets/logo.png",
 
   // Halaman menu (gambar). Tambah/kurangi/ganti urutan sesuka hati.
