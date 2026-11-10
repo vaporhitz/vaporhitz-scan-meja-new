@@ -1,0 +1,69 @@
+/* ===== WARNA & GAYA (ubah di sini) ===== */
+:root{
+  --bg:#fdf9e6;        /* latar halaman */
+  --card:#ffffff;      /* kartu */
+  --ink:#141414;       /* teks & garis hitam */
+  --muted:#5f5b4f;     /* teks pudar */
+  --accent:#ffc400;    /* kuning utama */
+  --accent-dark:#e0a900;
+  --radius:26px;
+  --border:3px;
+  --shadow:8px;        /* tebal bayangan kuning */
+  --font:"Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--ink);font:16px/1.5 var(--font);
+  padding:max(24px,env(safe-area-inset-top)) 16px max(32px,env(safe-area-inset-bottom))}
+.wrap{max-width:440px;margin:0 auto}
+.card{background:var(--card);border:var(--border) solid var(--ink);border-radius:var(--radius);
+  box-shadow:var(--shadow) var(--shadow) 0 var(--accent);padding:26px 20px 22px}
+.head{text-align:center;margin-bottom:18px}
+.logo{width:108px;height:108px;border-radius:50%;border:var(--border) solid var(--ink);background:var(--accent);
+  display:block;margin:0 auto 10px;object-fit:cover}
+h1{margin:0;font-size:24px;letter-spacing:.04em;font-weight:800;line-height:1.15}
+.tag{margin:8px 0 0;color:var(--muted);font-size:15px;line-height:1.45}
+
+.btn{display:flex;align-items:center;gap:12px;width:100%;padding:14px 16px;margin-top:14px;
+  background:var(--accent);color:var(--ink);border:var(--border) solid var(--ink);border-radius:16px;
+  box-shadow:0 4px 0 var(--ink);font:700 17px var(--font);text-align:left;text-decoration:none;cursor:pointer;
+  transition:transform .08s,box-shadow .08s}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 var(--ink)}
+.btn .ic{font-size:22px;flex:none}
+.btn small{display:block;font-weight:500;font-size:13px;opacity:.75}
+.btn .chev{margin-left:auto;font-size:22px;transition:transform .2s}
+.item.open > .btn .chev{transform:rotate(90deg)}
+.panel{display:none;padding:14px 4px 4px}
+.item.open > .panel{display:block}
+
+.btn.alt{background:#fff;font-size:15px;padding:10px 14px;margin-top:10px;justify-content:center}
+.btn.sm{white-space:nowrap;flex:none;display:inline-flex;width:auto;margin:0;padding:6px 12px;font-size:13px;border-radius:12px;box-shadow:0 3px 0 var(--ink);background:#fff}
+.net{border:2px solid var(--ink);border-radius:14px;padding:10px 12px;margin-bottom:12px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:5px 0}
+.row span{display:block;font-size:12px;color:var(--muted)}
+.row code{font:700 15px ui-monospace,Menlo,monospace;overflow-wrap:break-word}
+.qr{display:none;text-align:center;padding-top:10px}
+.qr.show{display:block}
+.qr img{width:190px;height:190px;border:2px solid var(--ink);border-radius:12px;padding:6px;background:#fff}
+.hint{font-size:13px;color:var(--muted);margin:6px 0 0}
+
+.stars{display:flex;justify-content:center;gap:6px;margin:4px 0 8px}
+.stars button{background:none;border:0;font-size:40px;line-height:1;color:#ddd6b8;cursor:pointer;padding:2px;-webkit-text-stroke:1.5px var(--ink)}
+.stars button.on{color:var(--accent)}
+textarea{width:100%;min-height:84px;border:2px solid var(--ink);border-radius:14px;padding:10px;font:inherit;background:#fff;color:var(--ink);resize:vertical}
+.done{display:none;text-align:center}
+
+.foot{text-align:center;color:var(--muted);font-size:12px;margin-top:22px}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom));transform:translateX(-50%);
+  background:var(--ink);color:#fff;padding:10px 16px;border-radius:999px;font-size:14px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:99}
+.toast.show{opacity:1}
+
+/* Tampilan menu layar penuh */
+.ov{display:none;position:fixed;inset:0;z-index:50;background:var(--bg);overflow-y:auto;-webkit-overflow-scrolling:touch}
+.ov.show{display:block}
+.ovh{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;
+  padding:calc(10px + env(safe-area-inset-top)) 16px 10px;background:var(--accent);border-bottom:var(--border) solid var(--ink)}
+.ovh b{font-size:18px}
+.ovh button{background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:12px;padding:7px 14px;font:700 14px var(--font);cursor:pointer;box-shadow:0 3px 0 var(--ink)}
+#menuPages{max-width:640px;margin:0 auto;padding:14px 12px calc(28px + env(safe-area-inset-bottom))}
+#menuPages img{display:block;width:100%;height:auto;border:var(--border) solid var(--ink);border-radius:16px;margin-bottom:14px;background:#fff;min-height:160px}

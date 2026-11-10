@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vaporhitz Vapestore</title>
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <div class="head">
+      <img class="logo" id="logo" alt="Logo">
+      <h1 id="nama"></h1>
+      <p class="tag" id="tagline"></p>
+    </div>
+
+    <div class="item">
+      <button class="btn" id="menuBtn"><span class="ic">📋</span><span>Menu Nicotine<small>Lihat daftar menu</small></span><span class="chev">›</span></button>
+    </div>
+
+    <div class="item" id="wifiItem">
+      <button class="btn"><span class="ic">📶</span><span>Free WiFi Vaporhitz Vapestore<small>Password &amp; barcode WiFi</small></span><span class="chev">›</span></button>
+      <div class="panel">
+        <div id="wifiList"></div>
+        <p class="hint">Salin password, lalu pilih nama WiFi di pengaturan WiFi HP. Atau scan barcode (QR) di atas agar HP langsung tersambung.</p>
+      </div>
+    </div>
+
+    <div class="item" id="rateItem">
+      <button class="btn"><span class="ic">⭐</span><span>Rating Pelayanan<small>Bantu kami jadi lebih baik</small></span><span class="chev">›</span></button>
+      <div class="panel">
+        <div id="rateForm">
+          <div class="stars" id="stars"></div>
+          <textarea id="kesan" maxlength="500" placeholder="Tulis kesan kamu tentang pelayanan kami (opsional)"></textarea>
+          <button class="btn alt" id="send">Kirim Penilaian</button>
+        </div>
+        <div class="done" id="done">
+          <p><b>Terima kasih! 💛</b><br>Mau bantu kami juga di Google Maps?</p>
+          <a class="btn alt" id="gmaps" target="_blank" rel="noopener">Beri rating di Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot" id="foot"></div>
+</div>
+
+<div class="ov" id="menuOv"><div class="ovh"><b id="menuJudul"></b><button id="menuClose">Tutup ✕</button></div><div id="menuPages"></div></div>
+<div class="toast" id="toast"></div>
+
+<script src="assets/qrcode.js"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
