@@ -6,6 +6,14 @@
 <title>Vaporhitz Vapestore</title>
 <link rel="icon" href="assets/logo.png">
 <link rel="stylesheet" href="style.css">
+<style>
+#benefitOv{position:fixed;inset:0;z-index:9999;background:#111;display:none;flex-direction:column}
+#benefitOv.show{display:flex}
+#benefitOv .bh{display:flex;justify-content:space-between;align-items:center;padding:calc(10px + env(safe-area-inset-top,0px)) 16px 10px;color:#FFCC00;font:600 15px system-ui,Arial,sans-serif;flex:none}
+#benefitOv .bh button{background:#FFCC00;color:#111;border:0;border-radius:10px;padding:7px 14px;font:600 14px system-ui,Arial,sans-serif;cursor:pointer}
+#benefitOv .bb{flex:1;overflow:auto;-webkit-overflow-scrolling:touch;text-align:center}
+#benefitOv img{width:100%;max-width:720px;height:auto;display:block;margin:0 auto}
+</style>
 </head>
 <body>
 <div class="wrap">
@@ -14,6 +22,10 @@
       <img class="logo" id="logo" alt="Logo">
       <h1 id="nama"></h1>
       <p class="tag" id="tagline"></p>
+    </div>
+
+    <div class="item">
+      <button class="btn" id="benefitBtn"><span class="ic">🎁</span><span>Benefit Member<small>Lihat keuntungan kartu member</small></span><span class="chev">›</span></button>
     </div>
 
     <div class="item">
@@ -47,10 +59,18 @@
 </div>
 
 <div class="ov" id="menuOv"><div class="ovh"><b id="menuJudul"></b><button id="menuClose">Tutup ✕</button></div><div id="menuPages"></div></div>
+<div id="benefitOv"><div class="bh"><b>Benefit Member</b><button id="benefitClose">Tutup ✕</button></div><div class="bb"><img src="assets/benefit-member.jpg" alt="Benefit Member Vaporhitz Vapestore"></div></div>
 <div class="toast" id="toast"></div>
 
 <script src="assets/qrcode.js"></script>
 <script src="config.js"></script>
 <script src="app.js"></script>
+<script>
+(function(){
+  var ov=document.getElementById('benefitOv');
+  document.getElementById('benefitBtn').addEventListener('click',function(){ov.classList.add('show')});
+  document.getElementById('benefitClose').addEventListener('click',function(){ov.classList.remove('show')});
+})();
+</script>
 </body>
 </html>
