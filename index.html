@@ -13,6 +13,15 @@
 #benefitOv .bh button{background:#FFCC00;color:#111;border:0;border-radius:10px;padding:7px 14px;font:600 14px system-ui,Arial,sans-serif;cursor:pointer}
 #benefitOv .bb{flex:1;overflow:auto;-webkit-overflow-scrolling:touch;text-align:center}
 #benefitOv img{width:100%;max-width:720px;height:auto;display:block;margin:0 auto}
+#cabangOv{position:fixed;inset:0;z-index:9999;background:#111;display:none;flex-direction:column}
+#cabangOv.show{display:flex}
+#cabangOv .bh{display:flex;justify-content:space-between;align-items:center;padding:calc(10px + env(safe-area-inset-top,0px)) 16px 10px;color:#FFCC00;font:600 15px system-ui,Arial,sans-serif;flex:none}
+#cabangOv .bh button{background:#FFCC00;color:#111;border:0;border-radius:10px;padding:7px 14px;font:600 14px system-ui,Arial,sans-serif;cursor:pointer}
+#cabangOv .bb{flex:1;overflow:auto;padding:4px 16px 24px}
+#cabangOv .crow{background:#1e1e1e;border-radius:14px;padding:12px;margin:0 auto 10px;max-width:520px}
+#cabangOv .cn{color:#fff;font:600 15px system-ui,Arial,sans-serif;margin-bottom:10px}
+#cabangOv .cl{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+#cabangOv .cl a{display:flex;align-items:center;justify-content:center;gap:8px;background:#FFCC00;color:#111;text-decoration:none;border-radius:10px;padding:11px 8px;font:600 14px system-ui,Arial,sans-serif}
 </style>
 </head>
 <body>
@@ -26,6 +35,10 @@
 
     <div class="item">
       <button class="btn" id="benefitBtn"><span class="ic">🎁</span><span>Benefit Member<small>Lihat keuntungan kartu member</small></span><span class="chev">›</span></button>
+    </div>
+
+    <div class="item">
+      <button class="btn" id="cabangBtn"><span class="ic">📍</span><span>Visit Cabang Vaporhitz<small>Instagram dan lokasi tiap cabang</small></span><span class="chev">›</span></button>
     </div>
 
     <div class="item">
@@ -59,6 +72,7 @@
 </div>
 
 <div class="ov" id="menuOv"><div class="ovh"><b id="menuJudul"></b><button id="menuClose">Tutup ✕</button></div><div id="menuPages"></div></div>
+<div id="cabangOv"><div class="bh"><b>Visit Cabang Vaporhitz</b><button id="cabangClose">Tutup &#10005;</button></div><div class="bb"><div class="crow"><div class="cn">Vaporhitz Mojokerto</div><div class="cl"><a href="https://www.instagram.com/vhitz.official/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span>Instagram</span></a><a href="https://maps.app.goo.gl/zcSxMj9fNrn54eWK7" target="_blank" rel="noopener"><span class="pin">&#128205;</span><span>Lokasi</span></a></div></div><div class="crow"><div class="cn">Vaporhitz Mojosari</div><div class="cl"><a href="https://www.instagram.com/vhitz.mojosari/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span>Instagram</span></a><a href="https://maps.app.goo.gl/CeKXVxWsgzC9z8517" target="_blank" rel="noopener"><span class="pin">&#128205;</span><span>Lokasi</span></a></div></div><div class="crow"><div class="cn">Vaporhitz Sukorejo</div><div class="cl"><a href="https://www.instagram.com/vhitz.sukorejo/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span>Instagram</span></a><a href="https://maps.app.goo.gl/ekLgjqbELKH8yx9aA" target="_blank" rel="noopener"><span class="pin">&#128205;</span><span>Lokasi</span></a></div></div><div class="crow"><div class="cn">Vaporhitz Ngoro</div><div class="cl"><a href="https://www.instagram.com/vhitz.ngoro/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span>Instagram</span></a><a href="https://maps.app.goo.gl/pVbTDAwCVLjNbBWu9" target="_blank" rel="noopener"><span class="pin">&#128205;</span><span>Lokasi</span></a></div></div><div class="crow"><div class="cn">Vaporhitz Jombang</div><div class="cl"><a href="https://www.instagram.com/vhitz.jombang/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span>Instagram</span></a><a href="https://maps.app.goo.gl/C8cqmecQXAiCZG5N8" target="_blank" rel="noopener"><span class="pin">&#128205;</span><span>Lokasi</span></a></div></div></div></div>
 <div id="benefitOv"><div class="bh"><b>Benefit Member</b><button id="benefitClose">Tutup ✕</button></div><div class="bb"><img src="assets/benefit-member.jpg" alt="Benefit Member Vaporhitz Vapestore"></div></div>
 <div class="toast" id="toast"></div>
 
@@ -70,6 +84,9 @@
   var ov=document.getElementById('benefitOv');
   document.getElementById('benefitBtn').addEventListener('click',function(){ov.classList.add('show')});
   document.getElementById('benefitClose').addEventListener('click',function(){ov.classList.remove('show')});
+  var co=document.getElementById('cabangOv');
+  document.getElementById('cabangBtn').addEventListener('click',function(){co.classList.add('show')});
+  document.getElementById('cabangClose').addEventListener('click',function(){co.classList.remove('show')});
 })();
 </script>
 </body>
